@@ -8,13 +8,6 @@ import (
 
 var Config *ini.File
 var RootPath string
-type Database struct {
-	Dbname string
-	Username string
-	Password string
-}
-
-var DatabaseSetting = &Database{}
 
 func init()  {
 	//RootPath项目绝对路径

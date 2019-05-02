@@ -18,7 +18,6 @@ func init()  {
 	ioutil.WriteFile(pidFilename, []byte(strconv.Itoa(pid)), 0755)
 }
 
-
 func main() {
 
 	r := gin.Default()
