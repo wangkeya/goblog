@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
-	_ "utils"
+	_ "common"
 )
 
 const ROOT = "/Users/alan/goblog"
