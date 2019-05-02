@@ -3,3 +3,4 @@ log
 pid
 bin
 pkg
+gin.log

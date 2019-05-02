@@ -15,7 +15,6 @@ func init()  {
 		log.Println(err)
 		return
 	}
-
 	defer db.Close()
 
 }

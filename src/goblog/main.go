@@ -2,11 +2,13 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"router"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strconv"
 	_ "common"
+	"io"
 )
 
 const ROOT = "/Users/alan/goblog"
@@ -19,12 +21,16 @@ func init()  {
 }
 
 func main() {
-
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	r := gin.New()
+	// 设置日志文件
+	f, _ := os.Create("gin.log")
+	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+	// 使用日志中间件
+	r.Use(gin.Logger())
+	// 设置静态文件夹
+	r.Static("/static", "./static")
+	// 加载路由
+	router.LoadWebRouters(r)
+	router.LoadAdminRouters(r)
+	r.Run(":8080")
 }
