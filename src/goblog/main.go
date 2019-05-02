@@ -1,9 +1,8 @@
 package main
 
 import (
-	"io"
+	"github.com/gin-gonic/gin"
 	"io/ioutil"
-	"net/http"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -13,12 +12,13 @@ const ROOT = "/Users/alan/goblog"
 
 func main() {
 	savePid()
-	http.HandleFunc("/", IndexHandler)
-	http.ListenAndServe(":8081", nil)
-}
-
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "hello world")
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080
 }
 
 //save pid
