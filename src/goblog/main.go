@@ -6,12 +6,14 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	_ "utils"
 )
 
 const ROOT = "/Users/alan/goblog"
 
 func main() {
 	savePid()
+
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{

@@ -15,6 +15,7 @@
     govendor fetch github.com/ugorji/go/codec
     govendor fetch gopkg.in/go-playground/validator.v8
     govendor fetch gopkg.in/yaml.v2
+    govendor fetch github.com/go-ini/ini
     
 
 ```
