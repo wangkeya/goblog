@@ -12,7 +12,6 @@ func LoadAdminRouters(router *gin.Engine) {
 }
 
 func loadAdminRouters(router *gin.Engine) {
-	// 这里测试根路由
 	/*
 		控制器函数会接收一个`gin.Context`类型的指针，这个指针包含http的请求和响应信息和操作方法。
 	*/
