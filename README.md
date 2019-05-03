@@ -26,7 +26,7 @@
 
 ### 启动
 ```
-    cd ~/goblog
+    cd project/goblog
     go run src/goblog/main.go
     
 ```
