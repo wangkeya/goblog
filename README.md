@@ -4,6 +4,8 @@
 
 * govendor v1.0.9
 * gin v1.3
+* gorm 
+* go-ini
 
 ### 安装
 ```
