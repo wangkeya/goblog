@@ -16,7 +16,8 @@ func loadWebRouters(router *gin.Engine) {
 	*/
 	v1 := router.Group("/web")
 	{
-		v1.GET("/getUsers",ctrls.GetUsers)
+		userController := new(ctrls.UserController)
+		v1.GET("/getUsers",userController.GetUsers)
 	}
 
 }
