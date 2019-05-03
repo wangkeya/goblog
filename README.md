@@ -18,7 +18,7 @@
     #读取配置
     govendor fetch github.com/go-ini/ini
     #数据库
-    govendor fetch github.com/go-sql-driver/mysql
+    govendor fetch github.com/jinzhu/gorm
   
 ```
 
