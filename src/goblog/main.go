@@ -9,6 +9,7 @@ import (
 	"strconv"
 	_ "common"
 	"io"
+	"middleware"
 )
 
 const ROOT = "/Users/alan/goblog"
@@ -29,6 +30,8 @@ func main() {
 	r.Use(gin.Logger())
 	// 设置静态文件夹
 	r.Static("/static", "./static")
+	//跨域
+	r.Use(middleware.CrossDomain())
 	// 加载路由
 	router.LoadWebRouters(r)
 	router.LoadAdminRouters(r)

@@ -20,8 +20,19 @@
     #数据库
     govendor fetch github.com/jinzhu/gorm
     govendor fetch github.com/jinzhu/gorm/dialects/mysql
-
 ```
+
+### 启动
+```
+    cd ~/goblog
+    go run src/goblog/main.go
+    
+```
+
+### 访问
+
+* http://localhost:8080/web/getUsers?tagId=1
+
 
 
 ### 系统特点
