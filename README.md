@@ -19,7 +19,8 @@
     govendor fetch github.com/go-ini/ini
     #数据库
     govendor fetch github.com/jinzhu/gorm
-  
+    govendor fetch github.com/jinzhu/gorm/dialects/mysql
+
 ```
 
 
