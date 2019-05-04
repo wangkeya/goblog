@@ -23,6 +23,13 @@
     govendor fetch github.com/jinzhu/gorm
     govendor fetch github.com/jinzhu/gorm/dialects/mysql
 ```
+### 本地开发
+
+``` 
+    cd project/src/server
+    gowatch
+```
+
 
 ### 启动
 ```
