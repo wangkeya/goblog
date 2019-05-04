@@ -12,7 +12,7 @@ import (
 	"strconv"
 )
 
-const ROOT = "/Users/alan/server"
+const ROOT = "/Users/alan/goblog"
 
 func init() {
 	//save pid
