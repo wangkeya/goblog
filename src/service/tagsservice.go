@@ -16,3 +16,4 @@ func (tagService *TagService) GetTagById(tagId int) (*model.Tag, error) {
 
 	return &tag, err
 }
+

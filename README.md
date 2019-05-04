@@ -38,10 +38,11 @@
     
 ```
 
-### 访问
+### 接口示例
 
 * http://localhost:8080/web/getUsers?tagId=1
-
+* http://localhost:8080/web/getPostById?postId=1
+* http://localhost:8080/web/getTagById?tagId=1
 
 
 ### 系统特点

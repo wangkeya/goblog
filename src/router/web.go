@@ -18,6 +18,12 @@ func loadWebRouters(router *gin.Engine) {
 	{
 		userController := new(ctrls.UserController)
 		v1.GET("/getUsers", userController.GetUsers)
+
+		postController := new(ctrls.PostController)
+		v1.GET("/getPostById", postController.GetPostById)
+
+		tagController := new(ctrls.TagController)
+		v1.GET("/getTagById", tagController.GetTagById)
 	}
 
 }
