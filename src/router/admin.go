@@ -1,8 +1,8 @@
 package router
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+	"net/http"
 	// ctrs "github.com/zachrey/blog/controllers"
 )
 
@@ -19,7 +19,7 @@ func loadAdminRouters(router *gin.Engine) {
 		// 返回一个json格式的数据
 		c.JSON(http.StatusOK, gin.H{
 			"Status": 0,
-			"data": "ok",
+			"data":   "ok",
 		})
 	})
 }

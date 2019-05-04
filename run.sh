@@ -19,7 +19,7 @@ DIRPWD=`pwd`
 
 export GOPATH=$DIRPWD
 
-cd src/goblog
+cd src/server
 
 go run main.go  >> $DIRPWD/log/panic.log 2>&1 &
 

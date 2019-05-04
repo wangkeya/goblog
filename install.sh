@@ -15,7 +15,7 @@ fi
 
 gofmt -w -s src
 
-go install goblog
+go install server
 
 export GOPATH="$OLDGOPATH"
 

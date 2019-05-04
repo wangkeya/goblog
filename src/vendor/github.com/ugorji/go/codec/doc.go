@@ -220,4 +220,3 @@ with some caveats. See Encode documentation.
 
 */
 package codec
-

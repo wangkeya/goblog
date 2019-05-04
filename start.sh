@@ -18,6 +18,6 @@ fi
 export GOTRACEBACK=crash
 ulimit -c unlimited
 
-~/goblog/bin/goblog >> log/panic.log 2>&1 &
+~/goblog/bin/server >> log/panic.log 2>&1 &
 
 echo "start successfully"

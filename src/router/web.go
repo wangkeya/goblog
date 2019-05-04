@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/gin-gonic/gin"
 	ctrls "controller/web"
+	"github.com/gin-gonic/gin"
 )
 
 // LoadRouters 初始化router
@@ -17,7 +17,7 @@ func loadWebRouters(router *gin.Engine) {
 	v1 := router.Group("/web")
 	{
 		userController := new(ctrls.UserController)
-		v1.GET("/getUsers",userController.GetUsers)
+		v1.GET("/getUsers", userController.GetUsers)
 	}
 
 }

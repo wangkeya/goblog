@@ -9,13 +9,13 @@ import (
 var Config *ini.File
 var RootPath string
 
-func init()  {
+func init() {
 	//RootPath项目绝对路径
-	RootPath="/Users/alan/goblog/src"
+	RootPath = "/Users/alan/goblog/src"
 	var err error
-	Config, err = ini.Load(RootPath+"/conf/app.ini")
+	Config, err = ini.Load(RootPath + "/conf/app.ini")
 	database := Config.Section("database")
-	username,_ := database.GetKey("username")
+	username, _ := database.GetKey("username")
 	fmt.Println(username)
 
 	if err != nil {

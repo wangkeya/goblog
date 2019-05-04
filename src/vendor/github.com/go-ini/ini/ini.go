@@ -50,7 +50,7 @@ var (
 	LineBreak = "\n"
 
 	// DefaultFormatLeft places custom spaces on the left when PrettyFormat and PrettyEqual are both disabled.
-	DefaultFormatLeft  = ""
+	DefaultFormatLeft = ""
 	// DefaultFormatRight places custom spaces on the right when PrettyFormat and PrettyEqual are both disabled.
 	DefaultFormatRight = ""
 
