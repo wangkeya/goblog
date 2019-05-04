@@ -2,7 +2,6 @@ package web
 
 import (
 	"github.com/gin-gonic/gin"
-	"fmt"
 	"strconv"
 	"service"
 	"net/http"
@@ -13,7 +12,6 @@ type PostController struct{}
 func (postController *PostController) GetPostById(c *gin.Context) {
 	var postId string
 	postId = c.Query("postId")
-	fmt.Println(postId)
 	id, _ := strconv.Atoi(postId)
 	postService := service.PostService{}
 	post, _ := postService.GetPostById(id)

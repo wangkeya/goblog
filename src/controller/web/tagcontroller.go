@@ -1,7 +1,6 @@
 package web
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"service"
@@ -13,7 +12,6 @@ type TagController struct{}
 func (tagController *TagController) GetTagById(c *gin.Context) {
 	var tagId string
 	tagId = c.Query("tagId")
-	fmt.Println(tagId)
 	id, _ := strconv.Atoi(tagId)
 	tagService := service.TagService{}
 	tag, _ := tagService.GetTagById(id)
