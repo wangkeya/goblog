@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
-	_ "common"
+	_ "libs/config"
 	"io"
 	"middleware"
 )
