@@ -34,7 +34,7 @@
 ### 启动
 ```
     cd project/goblog
-    go run src/goblog/main.go
+    go run src/server/main.go
     
 ```
 
