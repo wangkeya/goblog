@@ -44,6 +44,13 @@
 * http://localhost:8080/web/getPostById?postId=1
 * http://localhost:8080/web/getTagById?tagId=1
 
+### 并发测试
+
+``` 
+    ab -n 100 -c 100  http://localhost:8080/web/getUsers?tagId=1
+```
+
+
 
 ### 系统特点
 
