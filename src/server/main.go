@@ -15,6 +15,7 @@ import (
 const ROOT = "/Users/alan/goblog"
 
 func init() {
+
 	//save pid
 	pidFilename := ROOT + "/pid/" + filepath.Base(os.Args[0]) + ".pid"
 	pid := os.Getpid()
@@ -22,6 +23,7 @@ func init() {
 }
 
 func main() {
+
 	r := gin.New()
 	// 设置日志文件
 	f, _ := os.Create("gin.log")

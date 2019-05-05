@@ -1,19 +1,16 @@
 package service
 
 import (
-	"libs/database"
+	. "libs/database/mysql"
 	"model"
 )
 
 type TagService struct{}
 
 func (tagService *TagService) GetTagById(tagId int) (*model.Tag, error) {
-	db := database.NewMysql()
-	defer db.Close()
-
+	defer CloseDb()
 	var tag model.Tag
-	err := db.First(&tag, "id = ?", tagId).Error
-
+	err := DB.First(&tag, "id = ?", tagId).Error
 	return &tag, err
 }
 
