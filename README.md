@@ -22,6 +22,10 @@
     #数据库
     govendor fetch github.com/jinzhu/gorm
     govendor fetch github.com/jinzhu/gorm/dialects/mysql
+    #grpc
+    govendor fetch google.golang.org/grpc
+    #Protocol Buffers v3
+    govendor fetch github.com/golang/protobuf/protoc-gen-go
 ```
 ### 本地开发
 
