@@ -26,7 +26,7 @@ func main() {
 
 	r := gin.New()
 	// 设置日志文件
-	f, _ := os.Create("gin.log")
+	f, _ := os.Create(ROOT+"/log/gin.log")
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	// 使用日志中间件
 	r.Use(gin.Logger())
