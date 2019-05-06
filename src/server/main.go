@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"router"
 	"strconv"
+	mysql "libs/database/mysql"
 )
 
 const ROOT = "/Users/alan/goblog"
@@ -23,7 +24,8 @@ func init() {
 }
 
 func main() {
-
+	defer mysql.CloseDb()
+	
 	r := gin.New()
 	// 设置日志文件
 	f, _ := os.Create(ROOT+"/log/gin.log")

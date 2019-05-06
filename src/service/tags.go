@@ -8,7 +8,6 @@ import (
 type TagService struct{}
 
 func (tagService *TagService) GetTagById(tagId int) (*model.Tag, error) {
-	defer CloseDb()
 	var tag model.Tag
 	err := DB.First(&tag, "id = ?", tagId).Error
 	return &tag, err
