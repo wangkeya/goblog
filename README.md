@@ -13,7 +13,6 @@
     cd project/src
     govendor init
     govendor fetch github.com/gin-gonic/gin
-    govendor fetch gopkg.in/yaml.v2
     #读取配置
     govendor fetch github.com/go-ini/ini
     #数据库
