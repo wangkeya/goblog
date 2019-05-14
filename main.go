@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	ROOT = "/Users/alan/goblog"
+	ROOT = "/Users/alan/goblog/src/goblog"
 )
 
 func init() {

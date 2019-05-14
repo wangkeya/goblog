@@ -11,7 +11,7 @@
 ### 安装
 ```
     go get github.com/kardianos/govendor
-    cd project/src
+    cd project
     govendor init
     govendor fetch github.com/gin-gonic/gin
     #读取配置
@@ -30,8 +30,8 @@
 
 ### 启动
 ```
-    cd project/goblog
-    go run src/app/main.go
+    cd project
+    go run main.go
     
 ```
 
