@@ -66,6 +66,7 @@
 * docker部署
 * jwt
 * utc时间格式化
+* redis
 
 
 ### md写法
