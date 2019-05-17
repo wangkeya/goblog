@@ -26,7 +26,6 @@ func init() {
 
 func main() {
 	defer mysql.CloseDb()
-	
 	r := gin.New()
 	// 设置日志文件
 	f, _ := os.Create(ROOT+"/runtime/log/gin.log")

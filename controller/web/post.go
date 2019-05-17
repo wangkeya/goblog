@@ -6,6 +6,7 @@ import (
 	"goblog/service"
 	"net/http"
 	"fmt"
+	"goblog/libs/date"
 )
 
 type PostController struct{}
@@ -16,6 +17,7 @@ func (p *PostController) GetInfo(c *gin.Context) {
 	id, _ := strconv.Atoi(postId)
 	postService := service.PostService{}
 	post, _ := postService.GetPostById(id)
+	fmt.Println(date.FormatAsDate(post.UpdateTime))
 
 	// 返回一个json格式的数据
 	c.JSON(http.StatusOK, gin.H{
