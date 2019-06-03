@@ -11,6 +11,8 @@ import (
 	"goblog/router"
 	"strconv"
 	mysql "goblog/libs/database/mysql"
+	redis "goblog/libs/redis"
+
 )
 
 const (
@@ -26,6 +28,11 @@ func init() {
 
 func main() {
 	defer mysql.CloseDb()
+	err := redis.RedisClient.Set("test","test",0).Err()
+	if err != nil {
+		panic(err)
+	}
+
 	r := gin.New()
 	// 设置日志文件
 	f, _ := os.Create(ROOT+"/runtime/log/gin.log")
