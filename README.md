@@ -7,6 +7,7 @@
 * gorm 
 * go-ini
 * grpc
+* redis
 
 ### 安装
 ```
@@ -25,6 +26,9 @@
     govendor fetch golang.org/x/net
     govendor fetch golang.org/x/text
     govendor fetch google.golang.org/genproto
+    
+    #redis
+    govendor fetch github.com/go-redis/redis
     
 ```
 

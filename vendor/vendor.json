@@ -45,6 +45,48 @@
 			"revisionTime": "2019-03-27T02:48:45Z"
 		},
 		{
+			"checksumSHA1": "SMiB4nAFnKwnu5w6a/IqJBhXZ/M=",
+			"path": "github.com/go-redis/redis",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
+			"checksumSHA1": "tZJRl4B7hKoRe+nWAMA4JtsM7Kc=",
+			"path": "github.com/go-redis/redis/internal",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
+			"checksumSHA1": "GQZsUVg/+6UpQAYpc4luMvMutSI=",
+			"path": "github.com/go-redis/redis/internal/consistenthash",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
+			"checksumSHA1": "l66eTZiJqueypc56HXCakGDm784=",
+			"path": "github.com/go-redis/redis/internal/hashtag",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
+			"checksumSHA1": "IgTd7urGCyJC3Pxo63Yq0B+2Ry0=",
+			"path": "github.com/go-redis/redis/internal/pool",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
+			"checksumSHA1": "zCo0t+gRBbctwyIpkDLrqRFtXew=",
+			"path": "github.com/go-redis/redis/internal/proto",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
+			"checksumSHA1": "1PH2NoAB/u3IZmLYyCrIbOzqLZ4=",
+			"path": "github.com/go-redis/redis/internal/util",
+			"revision": "90febb9820fb3ae004396f67122763837812b951",
+			"revisionTime": "2019-06-01T10:00:05Z"
+		},
+		{
 			"checksumSHA1": "xWc9p5Kq5cQbDIwbXHdc9v8sdMU=",
 			"path": "github.com/go-sql-driver/mysql",
 			"revision": "d0a548181995c293eb09c61ef80099ba1cdbe8f5",
@@ -726,5 +768,6 @@
 			"revision": "e561f6794a2a09dd97bd3cdefde08db0d564f55c",
 			"revisionTime": "2019-04-18T00:09:45Z"
 		}
-	]
+	],
+	"rootPath": "goblog"
 }
