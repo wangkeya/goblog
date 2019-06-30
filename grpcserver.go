@@ -5,8 +5,7 @@ import (
 	"net"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	pb "goblog/grpc/helloworld"
-	//"google.golang.org/grpc/reflection"
+	pb "goblog/grpc"
 	"fmt"
 )
 
