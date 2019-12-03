@@ -73,30 +73,4 @@
 * redis
 
 
-### md写法
-
-### 删除线
-
-~~删除线~~
-
-#### 表格
-
-| name | age |
-| :----: | :----:|
-| w | w |
-
-#### 超链接
-
-[百度]:http://www.baidu.com 
-
-[百度]
-
-
-#### 图片
-
-![image](https://github.com/wangkeya/goblog/blob/master/go.png)
-
-<img src="https://github.com/wangkeya/goblog/blob/master/go.png" width = "100" height = "150" div align="left" />
-
-
 
