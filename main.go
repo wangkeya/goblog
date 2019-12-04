@@ -10,7 +10,7 @@ import (
 	"goblog/router"
 	"strconv"
 	mysql "goblog/libs/database/mysql"
-	redis "goblog/libs/redis"
+	redis "goblog/libs/cache"
 	"goblog/libs"
 )
 
