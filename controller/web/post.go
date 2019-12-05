@@ -6,7 +6,7 @@ import (
 	"goblog/service"
 	"net/http"
 	"fmt"
-	"goblog/libs/date"
+	"goblog/libs"
 )
 
 type PostController struct{}
@@ -17,7 +17,7 @@ func (p *PostController) GetInfo(c *gin.Context) {
 	id, _ := strconv.Atoi(postId)
 	postService := service.PostService{}
 	post, _ := postService.GetPostById(id)
-	fmt.Println(date.FormatAsDate(post.UpdateTime))
+	fmt.Println(libs.FormatAsDate(post.UpdateTime))
 
 	// 返回一个json格式的数据
 	c.JSON(http.StatusOK, gin.H{
@@ -28,18 +28,13 @@ func (p *PostController) GetInfo(c *gin.Context) {
 }
 
 func (p *PostController) GetList(c *gin.Context)  {
-	var pageRows string
-	var page string
-	page = c.Query("page")
-	pageRows = c.Query("pageRows")
-	_page,_:=strconv.Atoi(page)
-	_pageRows,_:=strconv.Atoi(pageRows)
 
-	//var maps = make(map[string]interface{})
+	page,_ := strconv.Atoi(c.Query("page"))
+	pageRows,_ := strconv.Atoi(c.Query("pageRows"))
 	var data = make(map[string]interface{})
 
 	postService :=service.PostService{}
-	posts,count,_ := postService.PageData(_page,_pageRows)
+	posts,count,_ := postService.PageData(page,pageRows)
 	data["lists"] = posts
 	data["total"] = count
 
