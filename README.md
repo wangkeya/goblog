@@ -2,34 +2,19 @@
 
 ### 技术栈
 
-* govendor
 * gin 
 * gorm 
 * go-ini
-* grpc
 * redis
+* mysql
+* jwt
 
 ### 安装
 ```
-    go get github.com/kardianos/govendor
-    cd project
-    govendor init
-    govendor fetch github.com/gin-gonic/gin
-    #读取配置
-    govendor fetch github.com/go-ini/ini
-    #数据库
-    govendor fetch github.com/jinzhu/gorm
-    govendor fetch github.com/jinzhu/gorm/dialects/mysql
-    
-    #grpc
-    govendor fetch google.golang.org/grpc
-    govendor fetch golang.org/x/net
-    govendor fetch golang.org/x/text
-    govendor fetch google.golang.org/genproto
-    
-    #redis
-    govendor fetch github.com/go-redis/redis
-    
+   go mod init 
+   go mod tidy
+   go mod vendor
+   
 ```
 
 ### 启动
@@ -41,16 +26,16 @@
 
 ### 接口示例
 
-* http://localhost:8080/web/user/getUsers?tagId=1
-* http://localhost:8080/web/post/getInfo/1
-* http://localhost:8080/web/post/getList?page=1&pageRows=1 分页实现
-* http://localhost:8080/web/post/delete/1
-* http://localhost:8080/web/tag/getTagById?tagId=1
+* http://localhost:5200/web/user/getUsers?tagId=1
+* http://localhost:5200/web/post/getInfo/1
+* http://localhost:5200/web/post/getList?page=1&pageRows=1 分页实现
+* http://localhost:5200/web/post/delete/1
+* http://localhost:5200/web/tag/getTagById?tagId=1
 
 ### 并发测试
 
 ``` 
-    ab -n 100 -c 100  http://localhost:8080/web/getUsers?tagId=1
+    ab -n 100 -c 100  http://localhost:5200/web/getUsers?tagId=1
 ```
 
 ### git标签
@@ -63,14 +48,10 @@
 ```
 
 
-
 ### 计划
-
 * react前端
 * docker部署
-* jwt
 * utc时间格式化
-* redis
 
 
 

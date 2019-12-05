@@ -43,8 +43,5 @@ func main() {
 	// 加载路由
 	router.LoadWebRouters(r)
 	router.LoadAdminRouters(r)
-
-
-
 	r.Run(":5200")
 }
