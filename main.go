@@ -10,6 +10,7 @@ import (
 	"goblog/router"
 	"strconv"
 	"goblog/libs"
+	"log"
 )
 
 var (
@@ -18,6 +19,7 @@ var (
 
 func init() {
 	//save pid
+	libs.CreateDir(ProjectPath+"/runtime/pid",false)
 	pidFilename :=  ProjectPath + "/runtime/pid/" + filepath.Base(os.Args[0]) + ".pid"
 	pid := os.Getpid()
 	ioutil.WriteFile(pidFilename, []byte(strconv.Itoa(pid)), 0755)
@@ -26,7 +28,11 @@ func init() {
 func main() {
 	r := gin.New()
 	// 设置日志文件
-	f, _ := os.Create( ProjectPath + "/runtime/log/gin.log")
+	logPath := libs.CreateDir(ProjectPath+"/runtime/log",true)
+	f, err := os.Create( logPath + "/gin.log")
+	if err != nil {
+		log.Fatal(err)
+	}
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	// 使用日志中间件
 	r.Use(gin.Logger(),gin.Recovery())
