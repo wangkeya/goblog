@@ -3,6 +3,7 @@ package router
 import (
 	ctrls "goblog/controller/web"
 	"github.com/gin-gonic/gin"
+	"goblog/middleware"
 )
 
 // LoadRouters 初始化router
@@ -16,8 +17,11 @@ func loadWebRouters(router *gin.Engine) {
 	*/
 	v1 := router.Group("/web")
 	{
+
 		userController := new(ctrls.UserController)
-		v1.GET("/user/getUsers", userController.GetUsers)
+		v1.POST("/user/register", userController.Register)
+		v1.POST("/user/login", userController.Login)
+		v1.GET("/user/getInfo",middleware.JWTAuth(), userController.GetInfo)
 
 		postController := new(ctrls.PostController)
 		v1.GET("/post/getInfo/:id", postController.GetInfo)
@@ -28,6 +32,8 @@ func loadWebRouters(router *gin.Engine) {
 
 		tagController := new(ctrls.TagController)
 		v1.GET("/tag/getTagById", tagController.GetTagById)
+
+
 	}
 
 }
