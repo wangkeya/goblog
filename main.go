@@ -3,14 +3,12 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"io"
-	"io/ioutil"
 	"goblog/middleware"
 	"os"
-	"path/filepath"
 	"goblog/router"
-	"strconv"
 	"goblog/libs"
 	"log"
+	"time"
 )
 
 var (
@@ -20,8 +18,8 @@ var (
 func main() {
 	r := gin.New()
 	// 设置日志文件
-	logPath := libs.CreateDir(ProjectPath+"/runtime/log",true)
-	f, err := os.Create( logPath + "/gin.log")
+	logPath := libs.CreateDir(ProjectPath+"/runtime/log",false)
+	f, err := os.Create( logPath + "/gin-"+libs.FormatAsDate(time.Now())+".log")
 	if err != nil {
 		log.Fatal(err)
 	}
