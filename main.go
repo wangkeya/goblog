@@ -17,14 +17,6 @@ var (
 	ProjectPath = libs.GetCurrentPath()
 )
 
-func init() {
-	//save pid
-	libs.CreateDir(ProjectPath+"/runtime/pid",false)
-	pidFilename :=  ProjectPath + "/runtime/pid/" + filepath.Base(os.Args[0]) + ".pid"
-	pid := os.Getpid()
-	ioutil.WriteFile(pidFilename, []byte(strconv.Itoa(pid)), 0755)
-}
-
 func main() {
 	r := gin.New()
 	// 设置日志文件
