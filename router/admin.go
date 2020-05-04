@@ -3,7 +3,6 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	// ctrs "github.com/zachrey/blog/controllers"
 )
 
 // LoadRouters 初始化router

@@ -6,20 +6,20 @@ import (
 	"goblog/middleware"
 	"os"
 	"goblog/router"
-	"goblog/libs"
+	"goblog/utils"
 	"log"
 	"time"
 )
 
 var (
-	ProjectPath = libs.GetCurrentPath()
+	ProjectPath = utils.GetCurrentPath()
 )
 
 func main() {
 	r := gin.New()
 	// 设置日志文件
-	logPath := libs.CreateDir(ProjectPath+"/runtime/log",false)
-	f, err := os.Create( logPath + "/gin-"+libs.FormatAsDate(time.Now())+".log")
+	logPath := utils.CreateDir(ProjectPath+"/runtime/log",false)
+	f, err := os.Create( logPath + "/gin-"+ utils.FormatAsDate(time.Now())+".log")
 	if err != nil {
 		log.Fatal(err)
 	}

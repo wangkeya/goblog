@@ -1,7 +1,7 @@
 package service
 
 import (
-	. "goblog/libs/database/mysql"
+	. "goblog/utils/database/mysql"
 	"goblog/model"
 	"fmt"
 	"time"

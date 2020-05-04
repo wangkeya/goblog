@@ -1,14 +1,14 @@
 package web
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
-	"goblog/service"
-	"log"
-	"time"
 	jwtgo "github.com/dgrijalva/jwt-go"
+	"github.com/gin-gonic/gin"
 	myjwt "goblog/middleware"
 	"goblog/model"
+	"goblog/service"
+	"log"
+	"net/http"
+	"time"
 )
 
 type UserController struct{}
